@@ -12,18 +12,34 @@ const Signin = () => {
     buttontext: "submit",
     loading: false,
     success: false,
-    error: false,
+    error: "",
   });
 
   const { email, password, showpassword, buttontext } = state;
 
   const handleChange = (name) => (e) =>
-    setState({ ...state, [name]: e.target.value });
+    setState({
+      ...state,
+      loading: false,
+      success: false,
+      error: "",
+      [name]: e.target.value,
+    });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (email === "" || password === "") {
+      setState({ ...state, error: "please complete all fields" });
+    }
+
+    console.log(state);
+  };
 
   return (
     <nav className="signin">
       Signin
-      <form>
+      <form onSubmit={handleSubmit}>
         <Input1
           value={email}
           type="email"

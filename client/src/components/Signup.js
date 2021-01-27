@@ -13,8 +13,8 @@ const Signup = () => {
     showpassword: false,
     buttontext: "submit",
     loading: false,
-    success: false,
-    error: false,
+    success: "",
+    error: "",
   });
 
   const {
@@ -24,15 +24,41 @@ const Signup = () => {
     confirmpassword,
     showpassword,
     buttontext,
+    loading,
+    success,
+    error,
   } = state;
 
   const handleChange = (name) => (e) =>
-    setState({ ...state, [name]: e.target.value });
+    setState({
+      ...state,
+      loading: false,
+      success: "",
+      error: "",
+      [name]: e.target.value,
+    });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (
+      username === "" ||
+      email === "" ||
+      password === "" ||
+      confirmpassword === ""
+    ) {
+      setState({ ...state, error: "please complete all fields" });
+    } else if (password !== confirmpassword) {
+      setState({ ...state, error: "passwords do not match" });
+    } else {
+      setState({ ...state, buttontext: "submitting" });
+    }
+  };
 
   return (
     <nav className="signup">
       Signup
-      <form>
+      <form onSubmit={handleSubmit}>
         <Input1
           value={username}
           type="text"
@@ -66,6 +92,9 @@ const Signup = () => {
         />
         <Button1 text={buttontext} />
       </form>
+      {loading && <div>LOADING...</div>}
+      {success && <div>{success}</div>}
+      {error && <div>{error}</div>}
     </nav>
   );
 };
