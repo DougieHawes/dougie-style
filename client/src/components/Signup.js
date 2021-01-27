@@ -1,6 +1,8 @@
 import { useState } from "react";
 
+// import utility components
 import { Input1 } from "./utils/inputs.js";
+import { Button1 } from "./utils/buttons.js";
 
 const Signup = () => {
   const [state, setState] = useState({
@@ -9,9 +11,20 @@ const Signup = () => {
     password: "",
     confirmpassword: "",
     showpassword: false,
+    buttontext: "submit",
+    loading: false,
+    success: false,
+    error: false,
   });
 
-  const { username, email, password, confirmpassword, showpassword } = state;
+  const {
+    username,
+    email,
+    password,
+    confirmpassword,
+    showpassword,
+    buttontext,
+  } = state;
 
   const handleChange = (name) => (e) =>
     setState({ ...state, [name]: e.target.value });
@@ -51,6 +64,7 @@ const Signup = () => {
           placeholder="confirm password..."
           onChange={handleChange("confirmpassword")}
         />
+        <Button1 text={buttontext} />
       </form>
     </nav>
   );

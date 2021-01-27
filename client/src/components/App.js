@@ -17,12 +17,14 @@ const App = () => {
   return (
     <div className="app">
       <Header />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/signin" component={Signin} />
-        <Route component={NotFound} />
-      </Switch>
+      <div className="route-box">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/signin" component={Signin} />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
     </div>
   );
 };

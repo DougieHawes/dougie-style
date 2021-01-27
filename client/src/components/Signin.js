@@ -1,15 +1,21 @@
 import { useState } from "react";
 
+// import utility components
 import { Input1 } from "./utils/inputs.js";
+import { Button1 } from "./utils/buttons.js";
 
 const Signin = () => {
   const [state, setState] = useState({
     email: "",
     password: "",
     showpassword: false,
+    buttontext: "submit",
+    loading: false,
+    success: false,
+    error: false,
   });
 
-  const { email, password, showpassword } = state;
+  const { email, password, showpassword, buttontext } = state;
 
   const handleChange = (name) => (e) =>
     setState({ ...state, [name]: e.target.value });
@@ -37,6 +43,7 @@ const Signin = () => {
           placeholder="enter password..."
           onChange={handleChange("password")}
         />
+        <Button1 text={buttontext} />
       </form>
     </nav>
   );
