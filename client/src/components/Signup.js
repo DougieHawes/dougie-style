@@ -1,19 +1,23 @@
 import { useState } from "react";
 
+import { signup } from "../api/auth";
+
+import { Redirect } from "react-router-dom";
+
 // import utility components
 import { Input1 } from "./utils/inputs.js";
 import { Button1 } from "./utils/buttons.js";
 
 const Signup = () => {
   const [state, setState] = useState({
-    username: "",
-    email: "",
-    password: "",
-    confirmpassword: "",
+    username: "Dougie Hawes",
+    email: "dougiehawes@hotmail.com",
+    password: "123456",
+    confirmpassword: "123456",
     showpassword: false,
     buttontext: "submit",
     loading: false,
-    success: "",
+    redirect: false,
     error: "",
   });
 
@@ -25,7 +29,7 @@ const Signup = () => {
     showpassword,
     buttontext,
     loading,
-    success,
+    redirect,
     error,
   } = state;
 
@@ -33,7 +37,6 @@ const Signup = () => {
     setState({
       ...state,
       loading: false,
-      success: "",
       error: "",
       [name]: e.target.value,
     });
@@ -51,7 +54,33 @@ const Signup = () => {
     } else if (password !== confirmpassword) {
       setState({ ...state, error: "passwords do not match" });
     } else {
-      setState({ ...state, buttontext: "submitting" });
+      const data = { username, email, password };
+
+      setState({ ...state, buttontext: "submitting", loading: true });
+
+      console.log(data);
+
+      signup(data)
+        .then((response) => {
+          console.log("SUCCESS: " + response);
+          setState({
+            ...state,
+            redirect: true,
+          });
+        })
+        .catch((err) => {
+          console.log("ERROR: " + err);
+          setState({
+            ...state,
+            username: "",
+            email: "",
+            password: "",
+            confirmpassword: "",
+            buttontext: "submit",
+            loading: false,
+            error: "register error, please try again",
+          });
+        });
     }
   };
 
@@ -93,7 +122,7 @@ const Signup = () => {
         <Button1 text={buttontext} />
       </form>
       {loading && <div>LOADING...</div>}
-      {success && <div>{success}</div>}
+      {redirect && <Redirect to="/signin" />}
       {error && <div>{error}</div>}
     </nav>
   );
