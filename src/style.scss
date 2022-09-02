@@ -1,0 +1,35 @@
+@import "./variables";
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: $colour1;
+}
+
+* {
+  box-sizing: border-box;
+  color: $colour1;
+  font-family: sans-serif;
+  margin: 0;
+  text-decoration: none;
+}
+
+.app {
+  background-blend-mode: screen;
+  background-color: rgba($color: $colour2, $alpha: 0.42);
+  background-image: url("./media/background.jpg");
+  background-position: center;
+  background-size: cover;
+  max-height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 3px 0.5%;
+  .routes {
+    max-height: 90vh;
+    overflow-x: hidden;
+  }
+}

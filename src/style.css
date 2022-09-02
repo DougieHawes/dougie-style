@@ -1,0 +1,35 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0f0a0a;
+}
+
+* {
+  box-sizing: border-box;
+  color: #0f0a0a;
+  font-family: sans-serif;
+  margin: 0;
+  text-decoration: none;
+}
+
+.app {
+  background-blend-mode: screen;
+  background-color: rgba(245, 239, 237, 0.42);
+  background-image: url("./media/background.jpg");
+  background-position: center;
+  background-size: cover;
+  max-height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 3px 0.5%;
+}
+.app .routes {
+  max-height: 90vh;
+  overflow-x: hidden;
+}/*# sourceMappingURL=style.css.map */
