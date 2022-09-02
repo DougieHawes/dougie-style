@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
 .header {
   display: flex;
+  height: 42px;
   justify-content: space-between;
 }
 .header .title-box .title {
   font-weight: 100;
   font-size: 42px;
-  margin-bottom: -14px;
+  margin: -12px 0;
 }/*# sourceMappingURL=style.css.map */

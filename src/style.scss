@@ -33,7 +33,7 @@ h1 {
   overflow: hidden;
   padding: 3px 0.5%;
   .routes {
-    max-height: 90vh;
+    max-height: $routes-height;
     overflow-x: hidden;
   }
 }

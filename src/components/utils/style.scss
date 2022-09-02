@@ -27,7 +27,7 @@
     color: $colour2;
     top: 0;
   }
-  .card-title-middle {
+  .card-title-medium {
     color: #666;
     top: 10%;
   }
@@ -54,4 +54,25 @@
 }
 .card1-link:hover {
   color: $colour2;
+}
+
+.card2 {
+  margin: 3px;
+  overflow: hidden;
+  width: 297px;
+  .card2-image {
+    height: 210px;
+    min-width: 297px;
+  }
+  .card2-title {
+    text-transform: uppercase;
+  }
+}
+
+.category-page {
+  .category-page-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }

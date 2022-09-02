@@ -10,12 +10,26 @@ export const Card1 = ({ category, title, route }) => {
     <div className="card">
       <Link to={route}>
         <img className="card-image" src={selected.image} alt={title} />
-        <h3 className="card-title card-title-light">{title}</h3>
-        <h3 className="card-title card-title-middle">{title}</h3>
-        <h3 className="card-title card-title-dark">{title}</h3>
+        <h2 className="card-title card-title-light">{title}</h2>
+        <h2 className="card-title card-title-medium">{title}</h2>
+        <h2 className="card-title card-title-dark">{title}</h2>
       </Link>
       <Link to={`/${title}/${selected.id}`} className="card1-link">
         &#x1F6CD;
+      </Link>
+    </div>
+  );
+};
+
+// represent an item on a category page
+export const Card2 = ({ item, category }) => {
+  const { id, image, name } = item;
+
+  return (
+    <div className="card2">
+      <Link to={`/${category}/${id}`}>
+        <img className="card2-image" src={image} alt={name} />
+        <h3 className="card2-title">{name}</h3>
       </Link>
     </div>
   );
