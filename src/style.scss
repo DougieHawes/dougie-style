@@ -18,6 +18,10 @@
   text-decoration: none;
 }
 
+h1 {
+  font-family: $font1;
+}
+
 .app {
   background-blend-mode: screen;
   background-color: rgba($color: $colour2, $alpha: 0.42);

@@ -1,4 +1,11 @@
 .header {
   display: flex;
   justify-content: space-between;
+  .title-box {
+    .title {
+      font-weight: 100;
+      font-size: 42px;
+      margin-bottom: -14px;
+    }
+  }
 }

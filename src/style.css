@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -16,6 +17,10 @@
   font-family: sans-serif;
   margin: 0;
   text-decoration: none;
+}
+
+h1 {
+  font-family: "Lalezar", cursive;
 }
 
 .app {
