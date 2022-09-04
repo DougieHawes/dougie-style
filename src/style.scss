@@ -23,11 +23,7 @@ h1 {
 }
 
 .app {
-  background-blend-mode: screen;
-  background-color: rgba($color: $colour2, $alpha: 0.42);
-  background-image: url("./media/background.jpg");
-  background-position: center;
-  background-size: cover;
+  background-color: $colour2;
   max-height: 100vh;
   min-height: 100vh;
   overflow: hidden;

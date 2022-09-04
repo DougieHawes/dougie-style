@@ -24,11 +24,7 @@ h1 {
 }
 
 .app {
-  background-blend-mode: screen;
-  background-color: rgba(245, 239, 237, 0.42);
-  background-image: url("./media/background.jpg");
-  background-position: center;
-  background-size: cover;
+  background-color: #f5efed;
   max-height: 100vh;
   min-height: 100vh;
   overflow: hidden;

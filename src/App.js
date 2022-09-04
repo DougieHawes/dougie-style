@@ -11,6 +11,8 @@ import Shirts from "./components/routes/public/Shirts";
 import Shoes from "./components/routes/public/Shoes";
 import Trousers from "./components/routes/public/Trousers";
 
+import Item from "./components/routes/public/Item";
+
 import "./style.css";
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
             <Route exact path="/shirts" element={<Shirts />} />
             <Route exact path="/shoes" element={<Shoes />} />
             <Route exact path="/trousers" element={<Trousers />} />
+            {/* item page */}
+            <Route exact path="/item/:category/:id" element={<Item />} />
           </Routes>
         </div>
       </BrowserRouter>

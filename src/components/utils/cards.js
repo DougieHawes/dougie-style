@@ -14,7 +14,7 @@ export const Card1 = ({ category, title, route }) => {
         <h2 className="card-title card-title-medium">{title}</h2>
         <h2 className="card-title card-title-dark">{title}</h2>
       </Link>
-      <Link to={`/${title}/${selected.id}`} className="card1-link">
+      <Link to={`/item/${title}/${selected.id}`} className="card1-link">
         &#x1F6CD;
       </Link>
     </div>
@@ -27,7 +27,7 @@ export const Card2 = ({ item, category }) => {
 
   return (
     <div className="card2">
-      <Link to={`/${category}/${id}`}>
+      <Link to={`/item/${category}/${id}`}>
         <img className="card2-image" src={image} alt={name} />
         <h3 className="card2-title">{name}</h3>
       </Link>
