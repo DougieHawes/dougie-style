@@ -14,61 +14,73 @@ import trousers12 from "../media/trousers/trousers12.jpg";
 const trousers = [
   {
     id: 1,
+    category: "trousers",
     name: "cream chinos",
     image: trousers1,
   },
   {
     id: 2,
+    category: "trousers",
     name: "stretch fit jeans",
     image: trousers2,
   },
   {
     id: 3,
+    category: "trousers",
     name: "purple bell bottoms",
     image: trousers3,
   },
   {
     id: 4,
+    category: "trousers",
     name: "funky patterned trousers",
     image: trousers4,
   },
   {
     id: 5,
+    category: "trousers",
     name: "dark denim trousers",
     image: trousers5,
   },
   {
     id: 6,
+    category: "trousers",
     name: "green autumn",
     image: trousers6,
   },
   {
     id: 7,
+    category: "trousers",
     name: "loose denim trousers",
     image: trousers7,
   },
   {
     id: 8,
+    category: "trousers",
     name: "trousers denim trousers",
     image: trousers8,
   },
   {
     id: 9,
+    category: "trousers",
     name: "biker trousers",
     image: trousers9,
   },
   {
     id: 10,
+    category: "trousers",
     name: "bomber trousers",
     image: trousers10,
   },
   {
     id: 11,
+    category: "trousers",
     name: "leather trousers with wool",
     image: trousers11,
   },
   {
     id: 12,
+    category: "trousers",
     name: "brown suede trousers",
     image: trousers12,
   },

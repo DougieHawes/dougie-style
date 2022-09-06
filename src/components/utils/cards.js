@@ -22,8 +22,8 @@ export const Card1 = ({ category, title, route }) => {
 };
 
 // represent an item on a category page
-export const Card2 = ({ item, category }) => {
-  const { id, image, name } = item;
+export const Card2 = ({ item }) => {
+  const { category, id, image, name } = item;
 
   return (
     <div className="card2">

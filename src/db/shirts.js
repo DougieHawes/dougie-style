@@ -14,61 +14,73 @@ import shirt12 from "../media/shirts/shirt12.jpg";
 const shirt = [
   {
     id: 1,
+    category: "shirts",
     name: "dark lumberjack shirt",
     image: shirt1,
   },
   {
     id: 2,
+    category: "shirts",
     name: "white flower-patterend short shirt",
     image: shirt2,
   },
   {
     id: 3,
+    category: "shirts",
     name: "dark spartan shirt",
     image: shirt3,
   },
   {
     id: 4,
+    category: "shirts",
     name: "loosefit green shirt",
     image: shirt4,
   },
   {
     id: 5,
+    category: "shirts",
     name: "dark denim shirt",
     image: shirt5,
   },
   {
     id: 6,
+    category: "shirts",
     name: "green autumn",
     image: shirt6,
   },
   {
     id: 7,
+    category: "shirts",
     name: "loose denim shirt",
     image: shirt7,
   },
   {
     id: 8,
+    category: "shirts",
     name: "shirt denim shirt",
     image: shirt8,
   },
   {
     id: 9,
+    category: "shirts",
     name: "biker shirt",
     image: shirt9,
   },
   {
     id: 10,
+    category: "shirts",
     name: "bomber shirt",
     image: shirt10,
   },
   {
     id: 11,
+    category: "shirts",
     name: "leather shirt with wool",
     image: shirt11,
   },
   {
     id: 12,
+    category: "shirts",
     name: "brown suede shirt",
     image: shirt12,
   },

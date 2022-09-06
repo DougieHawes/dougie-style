@@ -8,9 +8,42 @@ import trousers from "../../db/trousers";
 import "./style.css";
 
 const ItemPage = ({ params }) => {
-  let item;
+  let category = params.category;
+  let id = params.id;
 
-  return <div className="item-page">{item && item.name}</div>;
+  switch (category) {
+    case "accessories":
+      category = accessories;
+      break;
+    case "hats":
+      category = hats;
+      break;
+    case "jackets":
+      category = jackets;
+      break;
+    case "shirts":
+      category = shirts;
+      break;
+    case "shoes":
+      category = shoes;
+      break;
+    case "trousers":
+      category = trousers;
+      break;
+    default:
+      break;
+  }
+
+  let item = category[id];
+
+  const { name, image } = item;
+
+  return (
+    <div className="item-page">
+      <h3>{name}</h3>
+      <img src={image} alt="" />
+    </div>
+  );
 };
 
 export default ItemPage;

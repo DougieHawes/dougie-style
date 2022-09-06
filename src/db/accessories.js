@@ -14,61 +14,73 @@ import accessories12 from "../media/accessories/accessories12.jpg";
 const accessories = [
   {
     id: 1,
+    category: "accessories",
     name: "black glasses",
     image: accessories1,
   },
   {
     id: 2,
+    category: "accessories",
     name: "tortoise shell glasses",
     image: accessories2,
   },
   {
     id: 3,
+    category: "accessories",
     name: "blue earrings",
     image: accessories3,
   },
   {
     id: 4,
+    category: "accessories",
     name: "beaded earing and hairclip set",
     image: accessories4,
   },
   {
     id: 5,
+    category: "accessories",
     name: "black round glasses",
     image: accessories5,
   },
   {
     id: 6,
+    category: "accessories",
     name: "brown bag",
     image: accessories6,
   },
   {
     id: 7,
+    category: "accessories",
     name: "pocket watch",
     image: accessories7,
   },
   {
     id: 8,
+    category: "accessories",
     name: "rose headbands",
     image: accessories8,
   },
   {
     id: 9,
+    category: "accessories",
     name: "diamond bracelet",
     image: accessories9,
   },
   {
     id: 10,
+    category: "accessories",
     name: "coloured bangles",
     image: accessories10,
   },
   {
     id: 11,
+    category: "accessories",
     name: "brown studded bag",
     image: accessories11,
   },
   {
     id: 12,
+    category: "accessories",
     name: "golden dangle earings",
     image: accessories12,
   },
