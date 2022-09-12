@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 
 import Landing from "./components/routes/public/Landing";
 
@@ -34,6 +35,7 @@ function App() {
             <Route exact path="/item/:category/:id" element={<Item />} />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );

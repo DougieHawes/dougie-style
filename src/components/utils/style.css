@@ -14,24 +14,34 @@
   top: 0;
   transition: 1.4s left ease-in-out, 1.4s min-height ease-in-out, 1.4s min-width ease-in-out, 1.4s top ease-in-out;
 }
+.card .card-veneer {
+  background-color: rgba(15, 10, 10, 0);
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 0;
+  transition: 0.3s background-color ease-in-out;
+}
 .card .card-title {
   color: #f5efed;
   font-size: 42px;
   position: absolute;
   right: 0;
   text-transform: uppercase;
+  top: 0;
+  transition: 0.6s opacity ease-in-out, 0.6s top ease-in-out;
 }
 .card .card-title-light {
   color: #f5efed;
-  top: 0;
 }
 .card .card-title-medium {
   color: #666;
-  top: 10%;
+  opacity: 0;
 }
 .card .card-title-dark {
   color: #0f0a0a;
-  top: 20%;
+  opacity: 0;
 }
 
 .card:hover .card-image {
@@ -39,6 +49,19 @@
   min-height: 110%;
   min-width: 110%;
   top: -5%;
+}
+.card:hover .card-veneer {
+  background-color: rgba(15, 10, 10, 0.42);
+}
+.card:hover .card-title-medium,
+.card:hover .card-title-dark {
+  opacity: 1;
+}
+.card:hover .card-title-medium {
+  top: 10%;
+}
+.card:hover .card-title-dark {
+  top: 20%;
 }
 
 .card1-link {
@@ -69,4 +92,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.item-page {
+  max-height: calc(100vh - 42px - 35px);
+  min-height: calc(100vh - 42px - 35px);
 }/*# sourceMappingURL=style.css.map */

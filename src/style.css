@@ -31,6 +31,6 @@ h1 {
   padding: 3px 0.5%;
 }
 .app .routes {
-  max-height: calc(100vh - 42px);
+  max-height: calc(100vh - 42px - 35px);
   overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */

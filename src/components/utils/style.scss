@@ -16,24 +16,36 @@
     transition: 1.4s left ease-in-out, 1.4s min-height ease-in-out,
       1.4s min-width ease-in-out, 1.4s top ease-in-out;
   }
+  .card-veneer {
+    background-color: rgba($color: $colour1, $alpha: 0);
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+
+    transition: 0.3s background-color ease-in-out;
+  }
   .card-title {
     color: $colour2;
     font-size: 42px;
     position: absolute;
     right: 0;
     text-transform: uppercase;
+    top: 0;
+
+    transition: 0.6s opacity ease-in-out, 0.6s top ease-in-out;
   }
   .card-title-light {
     color: $colour2;
-    top: 0;
   }
   .card-title-medium {
     color: #666;
-    top: 10%;
+    opacity: 0;
   }
   .card-title-dark {
     color: $colour1;
-    top: 20%;
+    opacity: 0;
   }
 }
 
@@ -43,6 +55,19 @@
     min-height: 110%;
     min-width: 110%;
     top: -5%;
+  }
+  .card-veneer {
+    background-color: rgba($color: $colour1, $alpha: 0.42);
+  }
+  .card-title-medium,
+  .card-title-dark {
+    opacity: 1;
+  }
+  .card-title-medium {
+    top: 10%;
+  }
+  .card-title-dark {
+    top: 20%;
   }
 }
 
@@ -75,4 +100,9 @@
     flex-wrap: wrap;
     justify-content: space-around;
   }
+}
+
+.item-page {
+  max-height: $routes-height;
+  min-height: $routes-height;
 }

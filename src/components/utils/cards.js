@@ -10,6 +10,7 @@ export const Card1 = ({ category, title, route }) => {
     <div className="card">
       <Link to={route}>
         <img className="card-image" src={selected.image} alt={title} />
+        <div className="card-veneer"></div>
         <h2 className="card-title card-title-light">{title}</h2>
         <h2 className="card-title card-title-medium">{title}</h2>
         <h2 className="card-title card-title-dark">{title}</h2>

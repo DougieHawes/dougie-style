@@ -8,4 +8,11 @@
   font-weight: 100;
   font-size: 42px;
   margin: -12px 0;
+}
+
+.footer .footer-text {
+  text-align: center;
+}
+.footer .footer-text a {
+  color: #2292a4;
 }/*# sourceMappingURL=style.css.map */

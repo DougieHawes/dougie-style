@@ -9,4 +9,5 @@ $colour5: #bdbf09;
 $font1: "Lalezar", cursive;
 
 $header-height: 42px;
-$routes-height: calc(100vh - $header-height);
+$footer-height: 35px;
+$routes-height: calc(100vh - $header-height - $footer-height);
