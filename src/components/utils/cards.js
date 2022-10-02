@@ -28,7 +28,7 @@ export const Card2 = ({ item }) => {
 
   return (
     <div className="card2">
-      <Link to={`/item/${category}/${id}`}>
+      <Link to={`/item/${category}/${id - 1}`}>
         <img className="card2-image" src={image} alt={name} />
         <h3 className="card2-title">{name}</h3>
       </Link>
